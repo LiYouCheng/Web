@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS事件</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body onload="openmsg()" onunload="closemsg()">
+
+    onClick 单击<br/>
+    <!---->
+    <!--<button id="btn" onclick="demo()">按钮</button>-->
+    <!--<script>-->
+        <!--function demo() {-->
+            <!--alert("hello")-->
+        <!--}-->
+    <!--</script>-->
+
+    onMouseOver 鼠标经过 onMouseOut 鼠标移出<br/>
+    <!--<div class="div" onmouseout="onOut(this)" onmousemove="onOver(this)">-->
+
+    <!--</div>-->
+    <!--<script>-->
+        <!--function onOver(ooj) {-->
+            <!--ooj.innerHTML = "hello";-->
+        <!--}-->
+
+        <!--function onOut(ooj) {-->
+            <!--ooj.innerHTML = "world";-->
+        <!--}-->
+    <!--</script>-->
+
+    onChange 文本内容改变<br/>
+    <!--<form>-->
+        <!--<input type="text" onchange="demo(this)">-->
+        <!--<input type="text" onchange="alert('背景')">-->
+    <!--</form>-->
+    <!--<script>-->
+        <!--function demo(bg) {-->
+            <!--alert("hello 内容改变");-->
+        <!--}-->
+    <!--</script>-->
+
+    onSelect 文本框选中<br/>
+    <!--<form>-->
+        <!--<input type="text" onselect="demo(this)">-->
+    <!--</form>-->
+    <!--<script>-->
+        <!--function demo(bg) {-->
+            <!--bg.style.background = "red";-->
+        <!--}-->
+    <!--</script>-->
+
+    onFocus 光标聚焦<br/>
+    <!--<form>-->
+        <!--<input type="text" onfocus="demo(this)">-->
+    <!--</form>-->
+    <!--<script>-->
+        <!--function demo(bg) {-->
+            <!--bg.style.background = "blue";-->
+        <!--}-->
+    <!--</script>-->
+
+    onBlur 移开光标<br/>
+    <form>
+        <input type="text" onblur="demo(this)">
+    </form>
+    <script>
+        function demo(bg) {
+            bg.style.background = "green";
+        }
+    </script>
+    onLoad 网页加载<br/>
+    <script>
+        function openmsg() {
+            alert("网页加载提示打开")
+
+        }
+    </script>
+
+    onUnload 关闭网页<br/>
+
+    <script>
+        function closemsg() {
+            alert("网页加载提示关闭")
+
+        }
+    </script>
+</body>
+</html>

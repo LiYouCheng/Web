@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOM对象</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+
+
+
+网页加载时,浏览器会创建页面的文档对象模型DOM<br>
+<p>
+    DOM操作HTML
+    1、JS能够改变页面中的所有html元素<br/>
+    2、JS能够改变页面中的所有html属性<br/>
+
+
+
+    <!--<script>-->
+        <!--document.write("aaa");//决定不要在文档加载完成之后使用document.write()。这会覆盖该文档-->
+        <!--document.getElementById("");-->
+        <!--document.getElementsByTagName("");-->
+
+    <!--</script>-->
+    1:通过id或者标签名找到html元素<br/>
+    2:通过innerHTML改变元素内容<br>
+    3:通过attribute改变<br/>
+
+
+    <!--<a id="aid" href="https://www.baidu.com">hello</a><br/>-->
+    <!--<script>-->
+        <!--function demo() {-->
+            <!--document.getElementById("aid").href = "http://www.gigahome.cn";-->
+        <!--}-->
+    <!--</script>-->
+    <!--<button onclick="demo()">改变url</button>-->
+
+    3、JS能够改变页面中的所有css样式<br/>
+    语法:document.getElementById(id).style.property = new style<br>
+
+    <!--<div id="div" class="div">-->
+        <!--hello-->
+    <!--</div>-->
+    <!--<script>-->
+        <!--function change() {-->
+            <!--document.getElementById("div").style.background = "blue";-->
+        <!--}-->
+    <!--</script>-->
+    <!--<button onclick="change()">改变颜色</button>-->
+    <!--<br/>-->
+
+
+    4、JS能够对页面中所有事件作出反应<br/>
+
+    向指定元素添加事件句柄 addEventListener()
+    移除方法添加的事件句柄 removeEventListener();
+    <br/>
+
+
+    <button id="btn">按钮</button>
+    <script>
+//        document.getElementById("btn").addEventListener("click",function(){
+//            alert("hello")
+//        });
+
+        var x = document.getElementById("btn");
+        x.addEventListener("click",hello);
+x.addEventListener("click",word);
+        function hello() {
+            alert("ba");
+        }
+        function word() {
+            alert("d");
+        }
+
+        x.removeEventListener("click","hello");
+    </script>
+
+
+</p>
+
+<!--<p id="div">hello</p>-->
+<!--<script>-->
+    <!--function demo() {-->
+        <!--document.getElementById("div").innerHTML = "world";-->
+    <!--}-->
+<!--</script>-->
+<!--<button onclick="demo()">按钮</button>-->
+<!--<br/>-->
+
+</body>
+</html>
