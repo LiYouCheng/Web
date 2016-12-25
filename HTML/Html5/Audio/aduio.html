@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+属性control:提供播放、暂停、音量等控件
+标签aduio:定义声音
+标签source:规定多媒体资源，可多个
+    <audio src="song.mp3"controls="controls" id="audio">
+        插件不支持
+    </audio>
+
+    <script>
+        var au = document.getElementById("audio");
+        function clickPlay() {
+            if (au.paused) {
+                au.play();
+            }
+            else {
+                au.pause();
+            }
+
+        }
+    </script>
+
+    <button onclick="clickPlay()">
+        播放/暂停
+    </button>
+
+</body>
+</html>
