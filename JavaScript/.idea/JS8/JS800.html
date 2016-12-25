@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSDOM对象控制HTML元素</title>
+</head>
+<body>
+    <!--getElementsByName() 获取name-->
+    <!--getElementsByTageName() 获取元素-->
+    <!--getAttribute() 获取元素属性-->
+    <!--setAttribute() 设置元素属性-->
+    <!--childNodes() 访问子节点-->
+    <!--parentNode() 访问父节点-->
+    <!--createElement() 创建元素节点-->
+    <!--createTextNode() 创建文本节点-->
+    <!--insertBefore() 插入节点-->
+    <!--removeChild() 删除节点-->
+    <!--offsetHeight 网页尺寸-->
+    <!--scrollHeight 网页尺寸-->
+
+    <p name="pn">hello</p>
+    <p name="pn">hello</p>
+    <p name="pn">hello</p>
+    <p name="pn">hello</p>
+    <script>
+        function getName() {
+            var count = document.getElementsByName("pn");
+            alert(count.length);
+        }
+        var body = document.body;
+        var input = document.createElement("input");
+        input.type = "button";
+        input.value = "按钮";
+        input.onclick = "";
+        body.appendChild(input);
+
+        var div = document.getElementById("div");
+        div.removeChild(div.childNodes[1]);
+
+
+        var width = document.body.offsetWidth || document.documentElement.offsetWidth;
+
+        getName();
+    </script>
+</body>
+</html>

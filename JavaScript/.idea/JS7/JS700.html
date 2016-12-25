@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS内置对象</title>
+</head>
+<body onload="startTime()">
+    自定义对象<br/>
+
+    <script>
+        //创建自定义对象第一种方式
+//        people = new Object();
+//        people.name = "liyoucheng";
+//        people.age = "18";
+//
+//        document.write(people.name);
+
+//        people = {name:"shixiaohan",age:"20"}
+//        document.write(people.age);
+
+//创建自定义对象第二种方式
+//        function people(name,age) {
+//            this.name = name;
+//            this.age = age;
+//        }
+//        son = new people("li",30);
+//        document.write(son.name);
+    </script>
+
+    <div class="div" id="div">
+
+    </div>
+
+    <script>
+        //match对象
+//        round();//四舍五入
+//        random();//返回0-1之间的随机数
+//        max();//返回最高值
+//        min();//返回最低值
+//        abs();//返回绝对值
+
+        var rand = Math.random();
+        document.write(rand + "<br/>");
+
+        var max = Math.max(10,20,3,30);
+        document.write(max + "<br/>");
+    </script>
+
+
+
+
+    <!--array对象-->
+    <script>
+//        var myArray = [ "2","3" ];
+//        myArray.push("1") + "<br/>"
+//        var array1 = [ "5", "4" ];
+//        document.write(myArray + "<br/>");
+//
+//        var cArray = myArray.concat(array1);
+//        document.write(cArray + "<br/>");
+//
+//        var dArray = cArray.sort(function (a,b) {
+//            return b-a;
+//        });
+//        document.write(dArray + "<br/>");
+//
+//        var eArray = dArray.reverse();
+//        document.write(eArray + "<br/>");
+//        concat()//合并
+//        sort()//排序
+//        push()//末尾追加
+//        reverse();//翻转
+    </script>
+
+
+
+    <!--//date对象-->
+    <script>
+
+        var date = new Date();
+
+        //获取当日日期
+//        document.write(date +"<br/>");
+
+        //常用方法
+        /*
+        getFullYear();//获取年份
+        getTime();//获取毫秒
+        setFullYear();设置具体的日期
+        getDay();//获取星期
+
+         */
+//        document.write(date.getFullYear()+"<br/>");
+//        document.write(date.getTime()+"<br/>");
+//        document.write(date.getDay()+"<br/>");
+//        document.write(date.getMinutes()+"<br/>")
+
+
+//        //时钟
+//        function  startTime() {
+//            var today = new Date();
+//            var h = today.getHours();
+//            var m = today.getMinutes();
+//            var s = today.getSeconds();
+//
+//            m = checkkTime(m);
+//            s = checkkTime(s);
+//
+//            var html = document.getElementById("div");
+//            html.innerHTML =  h+":"+m+":"+s
+//
+//            t = setTimeout(function () {
+//                startTime();
+//            },1000);
+//        }
+//
+//        function checkkTime(i) {
+//            if (i < 10) {
+//                i = "0"+i;
+//            }
+//            return i;
+//        }
+
+    </script>
+
+
+
+    <!--//string对象-->
+    <script>
+        //indexOf
+        var str = "li you cheng";
+        //查找字符串
+        var temp = str.indexOf("y");
+        var length = str.length;
+
+//        //内容匹配
+//        document.write(str.match("cheng")+"<br/>");
+//
+//        //替换内容
+//        document.write(str.replace("li","shixiaofan")+"<br/>");
+//
+//        //大小写转换
+//        document.write(str.toUpperCase()+"<br/>");
+//
+//        //字符串分割
+//        var arr = str.split(" ");
+//        document.write(arr[1] +"<br/>");
+
+
+        //length,prototype,constructor
+        /*charAt(),
+        charCodeAt(),
+        concat(),
+        fromCharCode(),
+        indexOf(),
+        lastIndexOf(),
+        match(),
+        replace(),
+        search(),
+        slice(),
+        substring(),
+        substr(),
+        valueOf(),
+        toLowerCase(),
+        toUpperCase(),
+        split*/
+
+    </script>
+</body>
+</html>
