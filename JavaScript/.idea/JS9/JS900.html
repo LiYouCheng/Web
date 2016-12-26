@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS浏览器对象</title>
+</head>
+<body>
+    <p>
+        window对象,window对象是BOM的核心,window对象指当前的浏览器窗口
+        <br/>
+        所有JS全局对象、函数以及变量均自动生成为window对象的成员
+        <br/>
+        全局变量是window对象的属性
+        <br/>
+            全局函数是window对象的方法
+        <br/>
+        甚至HTML DOM的document也是window对象的属性之一
+        <br/>
+        window尺寸,
+        window.innerHeight 浏览器窗口的内部高度<br/>
+        window.innerWidth 浏览器窗口的内部宽度<br/>
+        <br/>
+        window.open()打开窗口
+        window.close()关闭窗口
+
+    </p>
+
+    <p id="ptime">
+        计时器
+        setInterval() 间隔指定的毫秒数不停地执行指定的代码
+        clearInterval() 用于停止setInterval()方法执行的函数代码
+
+
+        <br/>
+        setTimeout() 暂时指定的毫秒数后执行指定的代码
+        clearTimeout() 停止执行setTimeout()方法的函数代码
+        <br/>
+
+        <script>
+            var myTime = setInterval(function () {
+                getTime();
+            },1000);
+
+            function getTime() {
+                var d = new Date();
+                var t = d.toLocaleTimeString();
+                document.getElementById("ptime").innerHTML = t;
+            }
+        </script>
+
+    </p>
+
+    <p>
+        History对象
+        window.history 对象包含浏览器的历史(url)的集合
+        <br/>
+        history.back() 与在浏览器点击后退按钮相同
+        history.forward() 与在浏览器中点击向前按钮相同
+        hisotry.go() 进入历史中的某个页面
+    </p>
+
+    <p>
+        window.location 用于获得当前页面的地址url,并把浏览器重定向到新的页面
+        location.hostname 返回web主机的域名
+        location.pathname 返回当前页面的路径和文件名
+        location.port 返回web主机的端口
+        location.protocol 返回所使用的web协议(http://或https://)
+        location.href 属性返回当前页面的URL
+        location.assign() 方法加载新的文档
+    </p>
+
+
+    <p>
+        window.screen 对象包含有关用户屏幕的信息
+        screen.availWidth 可用的屏幕宽度
+        screen.availHeight 可用的屏幕高度
+        screen.Height 屏幕高度
+        screen.Width 屏幕宽度
+    </p>
+
+    Location对象
+    Screen对象
+    Navigator对象
+    弹出窗口
+    Cookies
+</body>
+</html>
