@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pattern</title>
+</head>
+<body>
+    对input元素使用pattern属性,并且将属性值设为某个格式的正则表达式
+,在提交时会针对这些进行检查,检查其内容是否符合给定格式。当输入的内容不符合
+给定格式时,则不允许提交,同时在浏览器中显示信息提示文字,提示输入的内容必须
+符合给定格式
+
+   <form action="http://www.gigahome.cn">
+       请输入内容
+       <input name="part" pattern="[A-Z]{3}">
+       <input type="submit">
+   </form>
+
+</body>
+</html>

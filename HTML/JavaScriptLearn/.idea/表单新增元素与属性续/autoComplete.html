@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>autocomplete属性</title>
+</head>
+<body>
+    帮助输入所用的自动完成功能,是一个既节省输入时间又十分方便的功能。在html5之前,
+    因为谁都可以看见输入的值,所有在安全方面存在缺陷,只要使用autocomplete属性,安全
+    性方面也可以得到很好的控制
+
+    <form>
+        <input type="text" name="greeting" autocomplete="" list="greetings">
+        <datalist id="greetings" style="display:none">
+            <option value="html5学习">html5学习</option>
+            <option value="ios学习">ios学习</option>
+        </datalist>
+
+    </form>
+</body>
+</html>

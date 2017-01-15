@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    url类型、email类型、date类型、time类型、datetime类型、dateim-local类型、
+    month类型、week类型、number类型、range类型、search类型、tel类型、color类型
+
+
+    <!--url-->
+    <form>
+        <input name="url" type="url" value="http://www.gigahome.cn">
+        <input type="submit" value="提交">
+    </form>
+<!--email-->
+    <form>
+        <input name="email" type="email" value="iwen@jikexueyuan.com">
+        <input type="submit" value="提交">
+    </form>
+<!--date-->
+    <form>
+        <input name="date" type="date" value="">
+        <input type="submit" value="提交">
+    </form>
+<!--time-->
+    <input name="time" type="time" value="10:00">
+<br>
+<!--datetime-->
+    <input name="datetime" type="datetime" value="">
+<!--datetime-locatin-->
+    <input name="datetimelocal" type="datetime-local">
+
+<!--month-->
+<br>
+<input type="month" name="month" value="2010-01-01">
+
+    <!--week-->
+<br>
+<input type="week" name="week" value="">
+
+<!--number-->
+<br>
+<input type="number" name="number" value="15" max="100" step="10" min="10">
+
+<!--range-->
+<br>
+<input type="range" name="range" value="25" min="0" max="100" step="5">
+
+<!--search-->
+<br>
+<input type="search" name="search">
+
+<!--tel-->
+    <br>
+<input type="tel">
+
+<!--color-->
+<br>
+<input type="color" onchange="document.body.style.backgroundColor = document.getElementById('currentColor').textContent = this.value;">
+<span id="currentColor"></span>
+
+<br>
+<!--output-->
+    <script>
+        function value_change() {
+            var number = document.getElementById("range").value;
+            document.getElementById("output").value = number;
+        }
+    </script>
+<form id="testform">
+    <input id="range" type="range" min="0" max="100" step="5" value="10" onchange="value_change()">
+    <output id="output">10</output>
+</form>
+
+<!--表单验证-->
+    <script>
+        function check() {
+            var email = document.getElementById("email");
+            if (email.value == "") {
+                alert("请输入email");
+                return false;
+            }
+            else if (!email.checkValidity()) {
+                alert("请输入正确的email地址");
+                return false;
+            }
+
+        }
+    </script>
+<form id="testform" onsubmit="check()" novalidate="true">
+    <label for="">Email</label>
+    <input name="email" type="email" id="email"><br>
+    <input type="submit">
+
+</form>
+
+
+
+</body>
+</html>

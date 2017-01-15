@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>indeterminate</title>
+</head>
+<body>
+    对于复选框checkbox元素来说,过去只是选取与非选取这两种状态。在html5中,
+可以再javascript脚本代码中对该元素使用indeterminate属性,以说明复选框处于"尚未明确是否选取"状态
+    <input type="checkbox" indeterminate id="cb">测试
+    <script>
+        var cb = document.getElementById("cb");
+        cb.indeterminate = true;
+
+    </script>
+    <form action="test.jsp" method="post">
+        姓名:<input type="text" name="name">
+        <input type="image" src="5.gif" alt="编辑" width="50" height="50">
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list属性</title>
+</head>
+<body>
+为单行文本框增加一个list属性,该属性的值为某个datalist元素的id。datalist元素
+也是html5中新增的元素,该元素类似于选择框,但是当用户想要设定的值不在选择列表之内时,
+允许自行输入。datalist元素本身并不显示,而是当文本框获得焦点时以提示输入的方式显示。
+
+<form>
+    <input type="text" name="greeting" list="greetings">
+    <datalist id="greetings" style="display:none">
+        <option value="html5学习">html5学习</option>
+        <option value="ios学习">ios学习</option>
+    </datalist>
+</form>
+</body>
+</html>

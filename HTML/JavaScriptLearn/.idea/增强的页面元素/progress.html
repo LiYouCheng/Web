@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>progress元素</title>
+</head>
+<body>
+    <script>
+        function progress_click() {
+//            for (var i = 0 ; i < 100;i++){
+//                setTimeout(function () {
+//                    updateProgres(i);
+//                },2000);
+//
+//            }
+            var i = 0;
+            function thread_one() {
+                if (i < 100) {
+                    i++;
+                    updateProgres(i);
+                }
+            }
+
+            setInterval(thread_one,100);
+        }
+
+
+    </script>
+    <script>
+        function updateProgres(newValue) {
+            var p = document.getElementById("p");
+            p.value = newValue;
+            p.getElementsByTagName("span")[0].textContent = newValue;
+        }
+    </script>
+    <section>
+        <h2>progress元素的使用</h2>
+        <p>完成的百分比<progress style="background-color: brown" id="p" max="100"> <span>0</span>%</progress></p>
+        <input type="button" onclick="progress_click()" value="点击">
+    </section>
+
+</body>
+</html>

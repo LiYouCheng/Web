@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>control属性</title>
+</head>
+<body>
+    在html5中,可以再标签内部放置一个表单元素,并且通过该标签的control
+属性来访问该表单元素。
+    <script>
+        function setValue(){
+            var label = document.getElementById("label");
+            var textbox = label.control;
+            textbox.value="010010";
+        }
+    </script>
+     <form>
+         <label id="label">
+             邮编
+             <input id="txt_zip" maxlength="6">
+             <small>请输入六位数</small>
+         </label>
+         <input type="button" value="设置默认值" onclick="setValue()">
+     </form>
+</body>
+</html>
